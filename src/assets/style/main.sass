@@ -1,0 +1,72 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+@layer base
+  @font-face
+    font-family: 'm_h_regular'
+    src: url('../fonts/MazzardH-Regular.woff2') format('woff2'), url('../fonts/MazzardH-Regular.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+  @font-face
+    font-family: 'm_h_medium'
+    src: url('../fonts/MazzardH-Medium.woff2') format('woff2'), url('../fonts/MazzardH-Medium.woff') format('woff')
+    font-weight: 500
+    font-style: normal
+    font-display: swap
+
+  @font-face
+    font-family: 'm_h_bold'
+    src: url('../fonts/MazzardH-Bold.woff2') format('woff2'), url('../fonts/MazzardH-Bold.woff') format('woff')
+    font-weight: bold
+    font-style: normal
+    font-display: swap
+
+  @font-face
+    font-family: 'm_m_semibold'
+    src: url('../fonts/MazzardM-SemiBold.woff2') format('woff2'), url('../fonts/MazzardM-SemiBold.woff') format('woff')
+    font-weight: 600
+    font-style: normal
+    font-display: swap
+
+  @font-face
+    font-family: 'm_m_bold'
+    src: url('../fonts/MazzardM-Bold.woff2') format('woff2'), url('../fonts/MazzardM-Bold.woff') format('woff')
+    font-weight: bold
+    font-style: normal
+    font-display: swap
+
+  @font-face
+    font-family: 'm_m_medium'
+    src: url('../fonts/MazzardM-Medium.woff2') format('woff2'), url('../fonts/MazzardM-Medium.woff') format('woff')
+    font-weight: 500
+    font-style: normal
+    font-display: swap
+
+  @font-face
+    font-family: 'm_h_semibold'
+    src: url('../fonts/MazzardH-SemiBold.woff2') format('woff2'), url('../fonts/MazzardH-SemiBold.woff') format('woff')
+    font-weight: 600
+    font-style: normal
+    font-display: swap
+
+  @font-face
+    font-family: 'm_m_regular'
+    src: url('../fonts/MazzardM-Regular.woff2') format('woff2'), url('../fonts/MazzardM-Regular.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+@layer utilities
+  .form__input
+    @apply font-m-m-medium text-[16px] leading-[20px] text-main-text text-main-text w-full p-[18px] min-h-[56px] mb-[24px] border-main-stroke border-[1px] rounded-[8px] outline-0
+    &:focus, &:hover
+      @apply border-[#9DA6AD]
+    &:not(:placeholder-shown)+label, &:focus-within+label
+      @apply text-[12px] px-[16px] py-[3px] opacity-100
+    + label
+      @apply font-m-m-regular leading-[20px] absolute left-0 text-main-text opacity-50 p-[18px] pointer-events-none transition-all
+
+
